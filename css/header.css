@@ -1,0 +1,41 @@
+header {
+    background-color:rgb(11, 177, 11);
+    padding: 25px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-left img{
+    width: 60px;
+    height: 60px;
+}
+
+.header-left h1 {
+    font-size: 2.4em;
+    font-weight: 300;
+    color: black;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right h3 {
+    font-size: 2em;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+}

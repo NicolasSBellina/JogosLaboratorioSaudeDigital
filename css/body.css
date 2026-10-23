@@ -1,0 +1,87 @@
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Cada jogo do catálogo */
+main section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 220px;
+
+    margin-bottom: 30px;
+    padding: 30px;
+
+    background-color: #f5f5f5;
+    border-radius: 20px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/*Dengue*/
+main section.Dengue {
+    background-color: white;
+    border: 3px solid rgb(11, 177, 11);
+    flex: 1;
+}
+
+/*Bloqueados*/
+main section.Bloqued {
+    background-color: #eeeeee;
+    opacity: 0.8;
+    border: 3px solid rgb(221, 23, 23);
+    flex: 1;
+}
+
+/* Efeito quando passa o mouse */
+main section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Área do texto */
+main section .main-content {
+    flex: 1;
+}
+
+main section article {
+    flex: 1;
+}
+
+main section article h2 {
+    font-size: 2em;
+    margin-bottom: 12px;
+}
+
+main section article p {
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #000000;
+    text-align: justify;
+}
+
+/* Área da imagem */
+
+main section figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+main section figure figcaption {
+    font-size: 0.8;
+    font-weight: 200;
+}

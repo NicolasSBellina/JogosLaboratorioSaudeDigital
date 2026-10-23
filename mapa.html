@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Planetária</title>
+    <link rel="icon" type="image/png" href="img\icons\earth-americas-duotone-solid.png">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mapa.css">
+    <link rel="stylesheet" href="css/mapa_responsive.css">
+    <link rel="stylesheet" href="css/jogos.css">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+    
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/e7c84dd0f4.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <div class="header-left">
+            <img src="img\icons\earth-americas-duotone-solid.png" alt="Planeta" width="60" height="60">
+            <h1>Saúde Planetária</h1> 
+        </div>
+        <div class="header-right">
+            <img src="img\icons\saude_digital.png" alt="LSD" width="120" height="60">
+            <h3>Laboratório de Saúde Digital</h3>
+        </div>
+    </header>
+
+    <!--Corpo-->
+    <main class="main-map">
+        <div class="map-container">
+            <img src="img/games/cidade_pixel.jpeg" alt="Imagem do jogo">
+
+            <!-- CARD 1: Minijogo Caça aos focos -->
+            <a href="javascript:void(0)" onclick="abrirJogo('/jogos/focos/index.html')" class="map-card card-bairro">
+                <div class="card-icon"></div>
+                <div class="card-info">
+                    <h3>Combate à Dengue</h3>
+                    <p>Elimine os focos no bairro!</p>
+                    <span class="btn-play">Jogar →</span>
+                </div>
+            </a>
+
+            <!-- CARD 2: Minijogo Memória-->
+            <a href="javascript:void(0)" onclick="abrirJogo('/jogos/Memoria/JogoDaMemoriaDengueAtualizado.html')" class="map-card card-parque">
+                <div class="card-icon"></div>
+                <div class="card-info">
+                    <h3>Parque Ecológico</h3>
+                    <p>memorize os focos para relatar.</p>
+                    <span class="btn-play">Jogar →</span>
+                </div>
+            </a>
+
+            <!-- CARD 3: Minijogo Quiz -->
+            <a href="javascript:void(0)" onclick="abrirJogo('/jogos/quiz/QuizBairroJogoAtualizado.html')" class="map-card card-escola">
+                <div class="card-icon"></div>
+                <div class="card-info">
+                    <h3>Educação na Escola</h3>
+                    <p>Quiz sobre prevenção.</p>
+                    <span class="btn-play">Jogar →</span>
+                </div>
+            </a>
+
+            <!-- CARD 4: Minijogo 7Erros -->
+            <a href="javascript:void(0)" onclick="abrirJogo('/jogos/7erros/sete_erros_index.html')" class="map-card card-periferia">
+                <div class="card-icon"></div>
+                <div class="card-info">
+                    <h3>Bairro</h3>
+                    <p>Ache os principais erros</p>
+                    <span class="btn-play">Jogar →</span>
+                </div>
+            </a>
+            </div>
+    </main>
+
+    <!-- Estrutura da Janela do Jogo -->
+    <div id="modal-jogo" class="modal-jogo">
+        <div class="modal-conteudo">
+            <button class="btn-fechar" onclick="fecharJogo()">✕ Fechar Jogo</button>
+            <iframe id="iframe-jogo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!--Final da Pagina-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Saúde Planetária</h3>
+                <p>
+                    Jogos educativos para aprender sobre saúde,
+                    ambiente e prevenção de doenças.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navegação</h3>
+                <a href="index.html" onclick="return confirmarSaida()">Sair</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Laboratório</h3>
+                <p>Laboratório de Saúde Digital</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Saúde Planetária — Laboratório de Saúde Digital
+        </div>
+    </footer>
+
+    <script>
+    let sairPermitido = false;
+
+    window.addEventListener("beforeunload", function (event) {
+
+        if (!sairPermitido) {
+            event.preventDefault();
+            event.returnValue = "";
+        }
+
+    });
+
+    function confirmarSaida() {
+
+        const sair = confirm(
+            "Tem certeza que deseja sair?\n\n" +
+            "Qualquer progresso não salvo pode ser perdido."
+        );
+
+        if (sair) {
+            sairPermitido = true;
+        }
+
+        return sair;
+    }
+    function abrirJogo(url) {
+        document.getElementById('iframe-jogo').src = url;
+        document.getElementById('modal-jogo').style.display = 'flex';
+    }
+
+    function fecharJogo() {
+        document.getElementById('iframe-jogo').src = '';
+        document.getElementById('modal-jogo').style.display = 'none';
+    }
+    </script>
+    
+</body>
+</html>

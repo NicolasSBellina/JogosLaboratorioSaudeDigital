@@ -1,0 +1,62 @@
+/* Container que cobre a tela inteira em qualquer ângulo (Horizontal ou Vertical) */
+.modal-jogo {
+    display: none; /* Controlado via JavaScript (flex ao abrir) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh; /* Garante 100% da viewport real em navegadores móbiles */
+    background-color: #000000;
+    z-index: 999999;
+    margin: 0;
+    padding: 0;
+}
+
+/* Preenchimento total do container da modal */
+.modal-conteudo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: #000000;
+    overflow: hidden;
+}
+
+/* Iframe ocupando toda a tela sem limites de altura/largura */
+#iframe-jogo {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+/* Botão de fechar flutuante sobre a tela do jogo */
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000000;
+    background: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-fechar:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}

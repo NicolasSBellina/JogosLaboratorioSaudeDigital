@@ -1,0 +1,267 @@
+/*Ajuste Navegador*/
+@media (min-width: 901px) and (max-width: 1100px) {
+    header {
+        padding: 18px 4%;
+        gap: 20px;
+    }
+
+    /* Saúde Planetária */
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 1;
+    }
+
+    .header-left img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .header-left h1 {
+        font-size: 1.8em;
+        white-space: nowrap;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .header-right img {
+        width: 70px;
+        height: 35px;
+    }
+
+    .header-right h3 {
+        font-size: 1.1em;
+        white-space: nowrap;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    main section {
+        gap: 25px;
+        padding: 25px;
+    }
+
+    main section figure {
+        width: 180px;
+    }
+
+    main section article h2 {
+        font-size: 1.8em;
+    }
+
+    main section article p {
+        font-size: 1em;
+    }
+}
+
+
+/*-------Tablets-----*/
+@media (min-width: 601px) and (max-width: 900px) {
+
+    main {
+        width: 92%;
+    }
+
+    main section {
+        gap: 25px;
+        padding: 25px;
+    }
+
+    main section figure {
+        width: 180px;
+    }
+
+    main section article h2 {
+        font-size: 1.8em;
+    }
+
+    main section article p {
+        font-size: 1em;
+    }
+
+    header {
+        padding: 18px 4%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 20px;
+    }
+
+    /* Logo + Saúde Planetária */
+    .header-left {
+        gap: 8px;
+    }
+
+    .header-left img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header-left h1 {
+        font-size: 1.6em;
+        white-space: nowrap;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .header-right img {
+        width: 70px;
+        height: 35px;
+    }
+
+    .header-right h3 {
+        font-size: 1.1em;
+        white-space: nowrap;
+    }
+
+    footer {
+        padding: 35px 6% 20px;
+        gap: 25px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1em;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.95em;
+    }
+
+}
+
+/*-------Celulares-----*/
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    main section {
+        flex-direction: column;
+
+        width: 100%;
+        min-height: auto;
+
+        padding: 25px 20px;
+
+        gap: 20px;
+    }
+
+    main section figure {
+        order: 1;
+        width: 70%;
+        max-width: 220px;
+    }
+
+    main section .main-content {
+        order: 2;
+        width: 100%;
+    }
+
+    main section article h2 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    main section article p {
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    header {
+        padding: 15px 20px;
+
+        flex-direction: column;
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .header-left {
+        justify-content: center;
+    }
+
+    .header-left img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header-left h1 {
+        font-size: 1.7em;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .header-right img {
+        width: 70px;
+        height: 35px;
+    }
+
+    .header-right h3 {
+        font-size: 1.1em;
+        white-space: nowrap;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 35px 25px 20px;
+
+        gap: 30px;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-section h3 {
+        margin-bottom: 10px;
+    }
+
+    .footer-section p {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .footer-section a {
+        margin-bottom: 6px;
+    }
+
+    .footer-bottom {
+        margin-top: 10px;
+    }
+
+}
+
+    
+@media (max-width: 600px) {
+
+    .sobre {
+        padding: 25px 20px;
+    }
+
+    .sobre h2 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    .sobre p {
+        font-size: 1em;
+    }
+}

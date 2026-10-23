@@ -1,0 +1,53 @@
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 5% 20px;
+    margin-top: 60px;
+}
+
+/* O Flexbox fica apenas na parte superior das colunas */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Colunas do footer */
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-section p {
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* Links */
+.footer-section a {
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    text-align: center;
+    color: #999;
+    font-size: 0.9em;
+}
